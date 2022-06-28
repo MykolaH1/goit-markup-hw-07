@@ -98,9 +98,7 @@ img{
 .site-nav{
    display: flex;
    margin-left: 93px;
-}
-.site-nav__item:not(:last-child) {
-   margin-right: 50px;
+   gap: 50px;
 }
 .site-nav__link{
    padding-top: 32px;
@@ -108,33 +106,14 @@ img{
    display: inline-block;
    position: relative;
 }
-.auth-nav{
-   display: inline-flex;
-   margin-left: auto;
-}
-.auth-nav__item:not(:last-child) {
-   margin-right: 50px;
-}
-.auth-nav__item,
-.site-nav__link,
-.auth-nav__link{
-   color: var(--title-text-color);
-   font-weight: 500;
-   font-size: 14px;
-   line-height: 1.14;
-   letter-spacing: 0.02em;
-   text-decoration: none;
-
-   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .site-nav__link:hover,
 .site-nav__link:focus{
    color: var(--accent-color);
 }
-.site-nav .active{
+.active{
    color: var(--accent-color);
 }
-.site-nav .active::after{
+.active::after{
    position: absolute;
    content: '';
    left: 0;
@@ -148,7 +127,23 @@ img{
    background-color: var(--accent-color);
    
 }
+.site-nav__link,
+.auth-nav__link {
+   color: var(--title-text-color);
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   text-decoration: none;
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /*-auth nav-*/
+.auth-nav {
+   display: inline-flex;
+   margin-left: auto;
+   gap: 50px;
+}
 .auth-nav__link {
    display: flex;
    color: var(--primary-text-color);
@@ -158,8 +153,7 @@ img{
 .auth-nav__link:focus {
    color: var(--accent-color);
 }
-.auth-nav__icon,
-.auth-nav-phone{
+.auth-nav__icon{
    width: 16px;
    height: 12px;
    margin-right: 10px;
@@ -168,16 +162,12 @@ img{
 
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.auth-nav-phone{
+.phone{
    width: 10px;
    height: 16px;
 }
 .auth-nav__link:hover .auth-nav__icon,
-.auth-nav__link:hover .auth-nav-phone {
-   fill: var(--accent-color);
-}
-.auth-nav__link:focus .auth-nav__icon,
-.auth-nav__link:focus .auth-nav-phone {
+.auth-nav__link:focus .auth-nav__icon{
    fill: var(--accent-color);
 }
 /*-section hero-*/
