@@ -409,7 +409,7 @@ img{
 .page-footer address{
    margin-top: 20px;
 }
-.footer-nav .link{
+.navigation__link{
    color: var(--silver-color);
 
    line-height: 1.71;
@@ -418,19 +418,15 @@ img{
 
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-nav .navigation:not(:last-child) {
+.navigation:not(:last-child) {
    margin-bottom: 9px;
 }
-.footer-nav .link:hover,
-.footer-nav .link:focus {
+.navigation__link:hover,
+.navigation__link:focus {
    color: var(--accent-color);
 }
-.footer-nav .address{
+.navigation__link-address{
    color: var(--background-color);
-
-   line-height: 1.71;
-   font-style: normal;
-   text-decoration: none;
 }
 
 .footer-title{
